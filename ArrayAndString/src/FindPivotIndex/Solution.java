@@ -14,6 +14,13 @@ class Solution {
             cur+= nums[i];
         }
         return -1;
+    }
 
+    public static void main(String[] args) {
+        int a[] = {10, 5, 8};
+
+        int min = Arrays.stream(a).min().getAsInt();
+
+        System.out.println(min);
     }
 }
