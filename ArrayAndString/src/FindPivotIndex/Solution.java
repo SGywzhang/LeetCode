@@ -1,10 +1,10 @@
 package FindPivotIndex;
 
 import java.util.Arrays;
+import java.util.PriorityQueue;
 
 class Solution {
     public int pivotIndex(int[] nums) {
-
         int sum = Arrays.stream(nums).sum();
         int cur = 0;
         for(int i = 0; i< nums.length; i++){
