@@ -53,12 +53,15 @@ class MyCircularQueue {
     /** Checks whether the circular queue is empty or not. */
     public boolean isEmpty() {
         return rear==front;
-
     }
 
     /** Checks whether the circular queue is full or not. */
     public boolean isFull() {
         return front == (rear + 1) % maxSize;
+    }
+
+    public int size(){
+        return (rear - front + maxSize) % maxSize;
     }
 }
 

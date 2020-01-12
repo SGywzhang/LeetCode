@@ -1,7 +1,7 @@
 package SqrtX;
 
 class Solution {
-    public int mySqrt(int x) {
+    public static int mySqrt(int x) {
 
         int l = 1;
         int r = x;
@@ -16,5 +16,9 @@ class Solution {
             }
         }
         return r;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(mySqrt(16));
     }
 }
