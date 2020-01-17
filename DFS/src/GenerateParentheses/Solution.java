@@ -30,6 +30,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        generateParenthesis(2);
+
+        generateParenthesis(3);
     }
 }

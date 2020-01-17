@@ -35,7 +35,6 @@ class Solution {
             if(check(n)){
                 start(n+1);
             }
-
         }
     }
 

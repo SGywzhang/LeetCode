@@ -14,6 +14,6 @@ class Solution {
             }
             map.put(nums[i],i);
         }
-        throw new RuntimeException("now two sum slution");
+        throw new RuntimeException("no two sum slution");
     }
 }

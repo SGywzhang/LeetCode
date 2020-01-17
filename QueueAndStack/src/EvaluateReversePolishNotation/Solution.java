@@ -34,7 +34,6 @@ class Solution {
                 }
                 stack.push(String.valueOf(res));
             }
-
         }
         return Integer.parseInt(stack.peek());
     }
