@@ -13,6 +13,8 @@ package ImplementStr;
 //    }
 //}
 
+import java.util.Arrays;
+
 class Solution {
     public int strStr(String haystack, String needle) {
 
@@ -28,15 +30,15 @@ class Solution {
             }
 
             if(haystack.charAt(i) == needle.charAt(j)){
-                j++;
-            }
-            if(j == needle.length())
-                return i-j+1;
+            j++;
         }
+        if(j == needle.length())
+            return i-j+1;
+    }
         return -1;
     }
 
-    public int[] kmpNext(String needle){
+    public static int[] kmpNext(String needle){
 
         int[] next = new int[needle.length()];
 
@@ -53,6 +55,11 @@ class Solution {
             next[i] = j;
         }
         return next;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = kmpNext("cbbd");
+        System.out.println(Arrays.toString(arr));
     }
 }
 

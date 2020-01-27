@@ -4,6 +4,7 @@ import Node.TreeNode;
 
 import java.util.Collections;
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class Codec {
     // Encodes a tree to a single string.
@@ -27,14 +28,14 @@ public class Codec {
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
-        LinkedList<String> queue = new LinkedList<>();
+        Queue<String> queue = new LinkedList<>();
         String[] ss = data.split(",");
         Collections.addAll(queue,ss);
         return decodeHelper(queue);
     }
 
-    public TreeNode decodeHelper(LinkedList<String>queue){
-        String s = queue.pollFirst();
+    public TreeNode decodeHelper(Queue<String>queue){
+        String s = queue.poll();
         if(s.equals("#")) return null;
         TreeNode cur = new TreeNode(Integer.parseInt(s));
         cur.left = decodeHelper(queue);

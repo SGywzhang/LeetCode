@@ -2,6 +2,9 @@ package AddTwoNumberII;
 
 import Nodes.ListNode;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Stack;
 
 class Solution {
@@ -48,5 +51,10 @@ class Solution {
         }
 
         return dummy.next;
+    }
+
+    public static void main(String[] args) {
+        List<Integer> list = new ArrayList<>();
+        Iterator<Integer> iter = list.iterator();
     }
 }

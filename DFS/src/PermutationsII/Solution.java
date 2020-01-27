@@ -1,11 +1,14 @@
-package Permutations;
+package PermutationsII;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 class Solution {
-    public List<List<Integer>> permute(int[] nums) {
+    public List<List<Integer>> permuteUnique(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
-        if(nums.length < 1) return res;
+        if(nums == null || nums.length == 0) return res;
+        Arrays.sort(nums);
         helper(res, new ArrayList<>(), new boolean[nums.length], nums);
         return res;
     }
@@ -17,6 +20,7 @@ class Solution {
         }
         for(int i = 0; i < nums.length; i++){
             if(visited[i]) continue;
+            if(i > 0 && nums[i] == nums[i - 1] && !visited[i - 1]) continue;
             list.add(nums[i]);
             visited[i] = true;
             helper(res, list, visited, nums);
