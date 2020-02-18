@@ -1,7 +1,7 @@
 package UniqueBinarySearchTrees;
 
 class Solution {
-    public int numTrees(int n) {
+    public static int numTrees(int n) {
         int[] count = new int[n + 1];
 
         count[0] = 1;
@@ -13,5 +13,9 @@ class Solution {
             }
         }
         return count[n];
+    }
+
+    public static void main(String[] args) {
+        numTrees(2);
     }
 }

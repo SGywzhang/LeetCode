@@ -58,7 +58,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        int[] arr = kmpNext("cbbd");
+        int[] arr = kmpNext("abcd#dcba");
         System.out.println(Arrays.toString(arr));
     }
 }
